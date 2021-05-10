@@ -1,24 +1,12 @@
 import React, { useState } from 'react'
-import { createStore } from 'redux'
+import { useSelector, useDispatch } from 'react-redux';
+import View from './View'
 
-function Counter() {
-	const [counter, setcounter] = useState(0)
-
-	const increment = () => {
-		setcounter(counter+1);
-	}
-
-	return (
-		<div>
-			Value: {counter} <button onClick={increment}>Incremtent</button>
-		</div>
-	)
-}
 
 function LandingPage() {
-	return (
+	return(
 		<div>
-			<Counter />
+			<View />
 		</div>
 	)
 }

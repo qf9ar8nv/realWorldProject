@@ -1,17 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import LandingPage from './LandingPage';
-import { Provider } from 'react-redux'
-
-import App from './App'
-import store from './store'
 
 import reportWebVitals from './reportWebVitals';
+
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+import counter from './counter'
+
+const store = createStore(counter, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
 ReactDOM.render(
 	<React.StrictMode>
 		<Provider store={store}>
-			<App />
+			<LandingPage />
 		</Provider>
 	</React.StrictMode>,
 	document.getElementById('root')
