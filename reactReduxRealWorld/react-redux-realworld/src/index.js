@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import LandingPage from './LandingPage';
+import App from './App';
 
 import reportWebVitals from './reportWebVitals';
 
@@ -13,7 +14,7 @@ const store = createStore(counter, window.__REDUX_DEVTOOLS_EXTENSION__ && window
 ReactDOM.render(
 	<React.StrictMode>
 		<Provider store={store}>
-			<LandingPage />
+			<App />
 		</Provider>
 	</React.StrictMode>,
 	document.getElementById('root')
